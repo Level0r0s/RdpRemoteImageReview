@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {0ED88DCC-A538-4443-B9E4-0557E8571170} = s 'RdpRenderClientPlugin Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			TypeLib = s '{171F09F8-8F6E-42CA-8CB6-0210A1AFC5AE}'
+			Version = s '1.0'
+		}
+	}
+}

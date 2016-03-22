@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {B586DC66-1402-4A5D-8C90-666A089156D9} = s 'ImageVolume Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			TypeLib = s '{91876712-337F-4CCD-A875-E7BE02B7C170}'
+			Version = s '1.0'
+		}
+	}
+}

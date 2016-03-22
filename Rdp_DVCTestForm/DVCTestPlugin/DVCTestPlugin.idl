@@ -1,0 +1,26 @@
+// DVCTestPlugin.idl : IDL source for DVCTestPlugin
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DVCTestPlugin.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "tsvirtualchannels.idl";
+
+[
+	uuid(A66348C4-9060-4912-9ADB-F5827771885F),
+	version(1.0),
+]
+library DVCTestPluginLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(CB103C7A-2425-42E7-8B60-C6D0CCA0A0D5)		
+	]
+	coclass RenderPlugin
+	{
+		[default] interface IWTSPlugin;
+	};
+};
+

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVCTestForm", "DVCTestForm\DVCTestForm.vcxproj", "{A82659B3-C1F3-4344-9688-ED42ABAB4E19}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVCTestPlugin", "DVCTestPlugin\DVCTestPlugin.vcxproj", "{94C564E7-31EF-493E-988A-9BF002993015}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DVCTestPluginPS", "DVCTestPlugin\DVCTestPluginPS.vcxproj", "{244E70B5-D159-4AF4-87AC-55AD7B5E600F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94C564E7-31EF-493E-988A-9BF002993015} = {94C564E7-31EF-493E-988A-9BF002993015}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A82659B3-C1F3-4344-9688-ED42ABAB4E19}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A82659B3-C1F3-4344-9688-ED42ABAB4E19}.Debug|Win32.Build.0 = Debug|Win32
+		{A82659B3-C1F3-4344-9688-ED42ABAB4E19}.Release|Win32.ActiveCfg = Release|Win32
+		{A82659B3-C1F3-4344-9688-ED42ABAB4E19}.Release|Win32.Build.0 = Release|Win32
+		{94C564E7-31EF-493E-988A-9BF002993015}.Debug|Win32.ActiveCfg = Debug|Win32
+		{94C564E7-31EF-493E-988A-9BF002993015}.Debug|Win32.Build.0 = Debug|Win32
+		{94C564E7-31EF-493E-988A-9BF002993015}.Release|Win32.ActiveCfg = Release|Win32
+		{94C564E7-31EF-493E-988A-9BF002993015}.Release|Win32.Build.0 = Release|Win32
+		{244E70B5-D159-4AF4-87AC-55AD7B5E600F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{244E70B5-D159-4AF4-87AC-55AD7B5E600F}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+// RenderCom.idl : IDL source for RenderCom
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RenderCom.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(860D3044-7914-4627-94D6-C99BE71FB1A8),
+	oleautomation,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IImageVolume : IUnknown{
+	[propget] HRESULT PixelSpacing([out, retval] SAFEARRAY(FLOAT)* pVal);
+	[propput] HRESULT PixelSpacing([in] SAFEARRAY(FLOAT) newVal);
+	[propget] HRESULT Buffer([out, retval] SAFEARRAY(BYTE) * pVal);
+	[propput] HRESULT Buffer([in] SAFEARRAY(BYTE) newVal);
+};
+[
+	uuid(91876712-337F-4CCD-A875-E7BE02B7C170),
+	version(1.0),
+]
+library RenderComLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(B586DC66-1402-4A5D-8C90-666A089156D9)		
+	]
+	coclass ImageVolume
+	{
+		[default] interface IImageVolume;
+	};
+};
+

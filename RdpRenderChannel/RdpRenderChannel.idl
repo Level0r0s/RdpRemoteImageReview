@@ -1,0 +1,52 @@
+// RdpRenderChannel.idl : IDL source for RdpRenderChannel
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RdpRenderChannel.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(F8E8E327-91AC-4F72-B137-CEE1CCBD4652),
+	pointer_default(unique)
+]
+interface IRdpRenderServer : IUnknown{
+	[propget] HRESULT InWtsSession([out, retval] VARIANT_BOOL* pVal);
+	[] HRESULT RegisterView([in] BSTR ViewName, [out,retval] ULONG* ViewId);
+	[] HRESULT UnregisterView([in] ULONG ViewId);
+	[] HRESULT AddLayer([in] ULONG ViewId, [in] ULONG LayerNumber, [in] BSTR LayerDescription);
+	[] HRESULT UpdateLayer([in] ULONG ViewId, [in] ULONG LayerNumber, [in] BSTR PixelFormatGuid, [in] BYTE* PixelBuffer);
+	[] HRESULT SetQuality([in] ULONG ViewId, [in] ULONG LayerNumber, [in] ULONG QualityLevel);
+};
+[
+	object,
+	uuid(D291CAD9-1CA9-4181-90CD-1BC6101F8808),
+	pointer_default(unique)
+]
+interface IRdpRenderClientPlugin : IUnknown{
+};
+[
+	uuid(171F09F8-8F6E-42CA-8CB6-0210A1AFC5AE),
+	version(1.0),
+]
+library RdpRenderChannelLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(C4ED5941-6BFE-49D6-A7EB-F5768243C807)		
+	]
+	coclass RdpRenderServer
+	{
+		[default] interface IRdpRenderServer;
+	};
+	[
+		uuid(0ED88DCC-A538-4443-B9E4-0557E8571170)		
+	]
+	coclass RdpRenderClientPlugin
+	{
+		[default] interface IRdpRenderClientPlugin;
+	};
+};
+

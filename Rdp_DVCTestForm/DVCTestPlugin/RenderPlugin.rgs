@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {CB103C7A-2425-42E7-8B60-C6D0CCA0A0D5} = s 'RenderPlugin Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			TypeLib = s '{A66348C4-9060-4912-9ADB-F5827771885F}'
+			Version = s '1.0'
+		}
+	}
+}
